@@ -8,5 +8,12 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^blog/', archive)
+)
+
+
+urlpatterns = patterns('mysite.blog.views',
+    # Examples:
+    # url(r'^$', 'mysite.views.home', name='home'),
+    # url(r'^blog/', include('blog.urls')),
+    url(r'^blog/', archive),
 )
