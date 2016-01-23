@@ -23,7 +23,7 @@ class BlogPost(models.Model):
         return self.title
     
     def get_absolute_url(self):
-        return reverse('blogpost:blogpost_detail', args=(self.id, self.link))
+        return '/%s/' % self.link
     
 class Tag(models.Model):
     title = models.CharField(max_length=20)
