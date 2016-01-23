@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from blog.views import archive,blog
+from blog.views import archive
 
 urlpatterns = patterns('',
     # Examples:

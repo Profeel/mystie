@@ -5,6 +5,7 @@ from django.http.response import HttpResponse
 from django.core.context_processors import request
 from django.shortcuts import redirect
 
+
 def archive(request):
     posts = BlogPost.objects.all()
     t = loader.get_template("archive.html")
@@ -21,3 +22,4 @@ def blog(request,blog_id,blog_link=''):
     return HttpResponse(t.render(c))
     #测试ridirect
     #return redirect('/guy')
+    return HttpResponse(t.render(c))
