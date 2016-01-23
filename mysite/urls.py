@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from blog.views import archive
+from blog.views import archive,blog
 
 urlpatterns = patterns('',
     # Examples:
@@ -16,4 +16,5 @@ urlpatterns += patterns('mysite.blog.views',
     # url(r'^$', 'mysite.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
     url(r'^blog/', archive),
+    url(r'^guy/', blog),
 )

@@ -14,11 +14,6 @@ class BlogPost(models.Model):
     class Meta:
         ordering = ['-publish_time']
     
-    def save(self, *args, **kwargs):
-        self.link = slugify(self.link)
-        self.snippet = self.content[:321]
-        super(BlogPost, self).save(*args, **kwargs)
-    
     def __unicode__(self):
         return self.title
     
