@@ -2,21 +2,8 @@
 from blog.models import BlogPost
 from django.template import Context,loader
 from django.http.response import HttpResponse
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 from django.core.context_processors import request
 from django.shortcuts import redirect
-
-=======
->>>>>>> parent of ce9f02e... Merge pull request #3 from Profeel/1.0
-=======
->>>>>>> parent of fe0aa71... the 2nd commit
-=======
->>>>>>> parent of fe0aa71... the 2nd commit
-=======
->>>>>>> parent of fe0aa71... the 2nd commit
 
 def archive(request):
     posts = BlogPost.objects.all()
@@ -31,7 +18,4 @@ def blog(request,blog_id,blog_link=''):
     )
     t = loader.get_template("blog.html")
     c = Context({'posts':posts})
-    return HttpResponse(t.render(c))
-    #测试ridirect
-    #return redirect('/guy')
     return HttpResponse(t.render(c))
